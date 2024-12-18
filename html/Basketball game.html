@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoot Like Nikola Jokić</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        #game-container {
+            margin: 50px auto;
+            width: 400px;
+            border: 2px solid #333;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        #hoop {
+            display: none;
+            margin: 20px auto;
+            width: 150px;
+            height: 150px;
+            background: url('data:image/png;base64,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') no-repeat center center;
+            background-size: contain;
+        }
+        #controls {
+            margin-top: 20px;
+        }
+        #timer, #score, #shots {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: #fff;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>Basketball Hoop Game</h1>
+        <div id="timer">Time: 30</div>
+        <div id="score">Score: 0</div>
+        <div id="shots">Shots Taken: 0</div>
+        <div id="hoop"></div>
+        <div id="controls">
+            <button id="start-button">Start</button>
+            <button id="shoot-button" disabled>Shoot</button>
+        </div>
+    </div>
+
+    <script>
+        const startButton = document.getElementById('start-button');
+        const shootButton = document.getElementById('shoot-button');
+        const timerDisplay = document.getElementById('timer');
+        const scoreDisplay = document.getElementById('score');
+        const shotsDisplay = document.getElementById('shots');
+        const hoop = document.getElementById('hoop');
+
+        let timeLeft = 30;
+        let score = 0;
+        let shots = 0;
+        let timer;
+
+        function startGame() {
+            score = 0;
+            shots = 0;
+            timeLeft = 30;
+            scoreDisplay.textContent = `Score: ${score}`;
+            shotsDisplay.textContent = `Shots Taken: ${shots}`;
+            timerDisplay.textContent = `Time: ${timeLeft}`;
+            hoop.style.display = 'block';
+            shootButton.disabled = false;
+            startButton.disabled = true;
+
+            timer = setInterval(() => {
+                timeLeft--;
+                timerDisplay.textContent = `Time: ${timeLeft}`;
+
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    endGame();
+                }
+            }, 1000);
+        }
+
+        function shoot() {
+            shots++;
+            shotsDisplay.textContent = `Shots Taken: ${shots}`;
+
+            const isMade = Math.random() < 0.5; // 50% chance
+
+            if (isMade) {
+                score++;
+                scoreDisplay.textContent = `Score: ${score}`;
+            }
+        }
+
+        function endGame() {
+            shootButton.disabled = true;
+            startButton.disabled = false;
+            hoop.style.display = 'none';
+            alert(`Game over! Your score is ${score}. You took ${shots} shots.`);
+        }
+
+        startButton.addEventListener('click', startGame);
+        shootButton.addEventListener('click', shoot);
+    </script>
+</body>
+</html>
+
